@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password | NEXIT</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="forgot-password">
+
+<div class="auth-layout">
+  <section class="auth-visual">
+    <a href="index.html" class="brand auth-brand">
+      <span class="brand-icon">N</span>
+      <span class="brand-name">NEXIT</span>
+    </a>
+
+    <div class="auth-visual-content">
+      <span class="hero-badge"><i data-lucide="shield-check"></i> Account Recovery</span>
+      <h1>Access restored.<br>Keep moving.</h1>
+      <p>Use the account recovery process to get back into your NEXIT workspace.</p>
+
+      <div class="auth-visual-features">
+        <div><i data-lucide="lock-keyhole"></i><span>Account security</span></div>
+        <div><i data-lucide="mail"></i><span>Email-based recovery</span></div>
+        <div><i data-lucide="shield-check"></i><span>Secure account access</span></div>
+      </div>
+    </div>
+
+    <div class="auth-visual-footer">
+      <span>Student & Teacher Management System</span>
+    </div>
+  </section>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-mobile-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-icon">N</span>
+          <span class="brand-name">NEXIT</span>
+        </a>
+      </div>
+
+      <div class="auth-recovery-icon">
+        <i data-lucide="key-round"></i>
+      </div>
+
+      <div class="auth-heading">
+        <span class="section-eyebrow">ACCOUNT RECOVERY</span>
+        <h2>Forgot password?</h2>
+        <p>Enter your registered email address. If recovery is configured, instructions can be sent to your email.</p>
+      </div>
+
+      <form id="forgotPasswordForm" class="auth-form" novalidate>
+        <div class="form-group">
+          <label for="forgotEmail">Email Address</label>
+          <div class="input-icon-wrapper">
+            <i data-lucide="mail"></i>
+            <input type="email" id="forgotEmail" name="email" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+          <small class="field-error" id="forgotEmailError"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="forgotPasswordSubmitBtn">
+          Submit Request <i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+
+      <div id="forgotPasswordSuccess" class="auth-success-message hidden">
+        <i data-lucide="check-circle"></i>
+        <div>
+          <strong>Request submitted</strong>
+          <p>If account recovery is available, follow the instructions provided to you.</p>
+        </div>
+      </div>
+
+      <p class="auth-footer-text">
+        Remember your password?
+        <a href="login.html" class="text-link">Back to login</a>
+      </p>
+
+      <a href="index.html" class="auth-back-link">
+        <i data-lucide="arrow-left"></i> Back to home
+      </a>
+    </div>
+  </main>
+</div>
+
+<div id="toastContainer" class="toast-container"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

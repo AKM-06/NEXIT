@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | NEXIT Teacher</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/teacher.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-portal="teacher" data-page="assignments">
+
+<div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand"><span class="logo-icon">N</span><span>NEXIT</span><button class="sidebar-close" id="sidebarClose">×</button></div>
+        <div class="sidebar-section">
+            <span class="sidebar-label">TEACHING</span>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link" data-page="dashboard">▦ Dashboard</a>
+                <a href="classes.html" class="nav-link" data-page="classes">▤ My Classes</a>
+                <a href="students.html" class="nav-link" data-page="students">♙ My Students</a>
+                <a href="attendance.html" class="nav-link" data-page="attendance">◷ Attendance</a>
+                <a href="assignments.html" class="nav-link active" data-page="assignments">▧ Assignments</a>
+                <a href="timetable.html" class="nav-link" data-page="timetable">▦ Timetable</a>
+            </nav>
+        </div>
+        <div class="sidebar-section"><span class="sidebar-label">ACCOUNT</span><nav class="sidebar-nav"><a href="profile.html" class="nav-link" data-page="profile">⚙ Profile</a></nav></div>
+        <div class="sidebar-bottom"><div class="sidebar-user"><div class="avatar">T</div><div><strong>Teacher</strong><small>Teacher Portal</small></div></div><button class="logout-btn" id="logoutBtn">↪ Logout</button></div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar"><button class="menu-toggle" id="menuToggle">☰</button><div class="topbar-title"><h2>Assignments</h2><p>Manage classroom work</p></div><div class="topbar-actions"><div class="avatar">T</div><span>Teacher</span></div></header>
+
+        <section class="page-content">
+            <div class="page-heading">
+                <div><h1>Assignment Management</h1><p>Create tasks, track submissions and evaluate work.</p></div>
+                <button class="btn btn-primary" id="teacherAddAssignmentBtn">+ Create Assignment</button>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="teacherAssignmentSearch" placeholder="Search assignments...">
+                <select id="teacherAssignmentClassFilter"><option value="">All classes</option></select>
+                <select id="teacherAssignmentStatusFilter"><option value="">All statuses</option><option value="active">Active</option><option value="completed">Completed</option></option></select>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead><tr><th>Assignment</th><th>Subject</th><th>Class</th><th>Deadline</th><th>Marks</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody id="teacherAssignmentsTableBody"></tbody>
+                </table>
+                <div id="teacherAssignmentsEmptyState" class="empty-state">
+                    <div class="empty-icon">▧</div>
+                    <h3>No assignments created</h3>
+                    <p>Create your first assignment for students.</p>
+                    <button class="btn btn-primary" id="teacherEmptyAddAssignmentBtn">+ Create Assignment</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div id="toastContainer" class="toast-container"></div>
+<div id="modalContainer"></div>
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | NEXIT</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-portal="admin" data-page="announcements">
+<div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand"><span class="logo-icon">N</span><span>NEXIT</span><button class="sidebar-close" id="sidebarClose">×</button></div>
+        <div class="sidebar-section"><span class="sidebar-label">MAIN MENU</span><nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link" data-page="dashboard">▦ Dashboard</a>
+            <a href="students.html" class="nav-link" data-page="students">♙ Students</a>
+            <a href="teachers.html" class="nav-link" data-page="teachers">♧ Teachers</a>
+            <a href="classes.html" class="nav-link" data-page="classes">▤ Classes</a>
+            <a href="subjects.html" class="nav-link" data-page="subjects">▣ Subjects</a>
+        </nav></div>
+        <div class="sidebar-section"><span class="sidebar-label">ACADEMICS</span><nav class="sidebar-nav">
+            <a href="attendance.html" class="nav-link" data-page="attendance">◷ Attendance</a>
+            <a href="timetable.html" class="nav-link" data-page="timetable">▦ Timetable</a>
+            <a href="assignments.html" class="nav-link" data-page="assignments">▧ Assignments</a>
+            <a href="examinations.html" class="nav-link" data-page="examinations">✎ Examinations</a>
+            <a href="results.html" class="nav-link" data-page="results">▤ Results</a>
+        </nav></div>
+        <div class="sidebar-section"><span class="sidebar-label">SYSTEM</span><nav class="sidebar-nav">
+            <a href="announcements.html" class="nav-link active" data-page="announcements">♧ Announcements</a>
+            <a href="settings.html" class="nav-link" data-page="settings">⚙ Settings</a>
+        </nav></div>
+        <div class="sidebar-bottom"><div class="sidebar-user"><div class="avatar">A</div><div><strong>Administrator</strong><small>Admin Portal</small></div></div><button class="logout-btn" id="logoutBtn">↪ Logout</button></div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar"><button class="menu-toggle" id="menuToggle">☰</button><div class="topbar-title"><h2>Announcements</h2><p>Institutional communications</p></div><div class="topbar-actions"><div class="avatar">A</div><span>Admin</span></div></header>
+        <section class="page-content">
+            <div class="page-heading"><div><h1>Announcements</h1><p>Publish updates and important notices.</p></div><button class="btn btn-primary" id="addAnnouncementBtn">+ Create Announcement</button></div>
+            <div class="toolbar">
+                <input type="search" id="announcementSearch" placeholder="Search announcements...">
+                <select id="announcementPriorityFilter"><option value="">All priorities</option><option value="normal">Normal</option><option value="important">Important</option><option value="urgent">Urgent</option></select>
+            </div>
+            <div id="announcementsContainer" class="announcement-grid">
+                <div id="announcementsEmptyState" class="empty-state"><div class="empty-icon">♧</div><h3>No announcements</h3><p>Publish your first institutional announcement.</p><button class="btn btn-primary" id="emptyAddAnnouncementBtn">+ Create Announcement</button></div>
+            </div>
+        </section>
+    </main>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div><div id="toastContainer" class="toast-container"></div><div id="modalContainer"></div>
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

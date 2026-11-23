@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Attendance | NEXIT</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/student.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-portal="student" data-page="attendance">
+
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">N</span><span class="brand-name">NEXIT</span></a>
+      <button class="icon-button sidebar-close" id="sidebarClose">×</button>
+    </div>
+
+    <div class="sidebar-profile">
+      <div class="avatar avatar-lg" id="studentProfileAvatar">S</div>
+      <div class="sidebar-profile-info"><strong id="studentSidebarName">Student</strong><span>Student Portal</span></div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-label">MAIN MENU</span>
+      <a href="dashboard.html" class="nav-link" data-page="dashboard"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+      <a href="attendance.html" class="nav-link active" data-page="attendance"><i data-lucide="calendar-check"></i><span>Attendance</span></a>
+      <a href="timetable.html" class="nav-link" data-page="timetable"><i data-lucide="calendar-days"></i><span>Timetable</span></a>
+      <a href="assignments.html" class="nav-link" data-page="assignments"><i data-lucide="clipboard-list"></i><span>Assignments</span></a>
+      <a href="results.html" class="nav-link" data-page="results"><i data-lucide="graduation-cap"></i><span>Results</span></a>
+      <a href="study-planner.html" class="nav-link" data-page="study-planner"><i data-lucide="book-open-check"></i><span>Study Planner</span></a>
+      <a href="announcements.html" class="nav-link" data-page="announcements"><i data-lucide="megaphone"></i><span>Announcements</span></a>
+      <span class="nav-label">ACCOUNT</span>
+      <a href="profile.html" class="nav-link" data-page="profile"><i data-lucide="user-round"></i><span>My Profile</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="nav-link logout-button" id="logoutBtn"><i data-lucide="log-out"></i><span>Logout</span></button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menuToggle"><i data-lucide="menu"></i></button>
+      <div class="topbar-heading">
+        <h1>My Attendance</h1>
+        <p>Track your attendance record</p>
+      </div>
+      <div class="topbar-actions">
+        <a href="announcements.html" class="icon-button"><i data-lucide="bell"></i></a>
+        <a href="profile.html" class="topbar-avatar"><span id="studentTopbarInitial">S</span></a>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="page-intro">
+        <h2>Attendance Records</h2>
+        <p>Review your attendance and attendance summaries.</p>
+      </div>
+
+      <div class="stats-grid attendance-stats" id="studentAttendanceSummary">
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-green"><i data-lucide="check-circle"></i></div>
+          <div class="stat-info"><span>Present</span><h3>0</h3></div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-red"><i data-lucide="x-circle"></i></div>
+          <div class="stat-info"><span>Absent</span><h3>0</h3></div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-orange"><i data-lucide="clock"></i></div>
+          <div class="stat-info"><span>Late</span><h3>0</h3></div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-blue"><i data-lucide="percent"></i></div>
+          <div class="stat-info"><span>Attendance Rate</span><h3>--</h3></div>
+        </article>
+      </div>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div><h3>Attendance History</h3><p>Recorded attendance details</p></div>
+          <div class="filter-group">
+            <input type="month" id="studentAttendanceMonth" aria-label="Filter attendance by month">
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Subject</th>
+                <th>Teacher</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="studentAttendanceTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="empty-state" id="studentAttendanceEmptyState">
+          <div class="empty-state-icon"><i data-lucide="calendar-check"></i></div>
+          <h3>No attendance records</h3>
+          <p>Your attendance history will appear once it has been recorded.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+</div>
+
+<div id="modalContainer"></div>
+<div id="toastContainer" class="toast-container"></div>
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

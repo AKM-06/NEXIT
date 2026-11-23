@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard | NEXIT</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/teacher.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-portal="teacher" data-page="dashboard">
+
+<div class="app-layout">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <span class="logo-icon">N</span>
+            <span>NEXIT</span>
+            <button class="sidebar-close" id="sidebarClose">×</button>
+        </div>
+
+        <div class="sidebar-section">
+            <span class="sidebar-label">TEACHING</span>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link active" data-page="dashboard">▦ Dashboard</a>
+                <a href="classes.html" class="nav-link" data-page="classes">▤ My Classes</a>
+                <a href="students.html" class="nav-link" data-page="students">♙ My Students</a>
+                <a href="attendance.html" class="nav-link" data-page="attendance">◷ Attendance</a>
+                <a href="assignments.html" class="nav-link" data-page="assignments">▧ Assignments</a>
+                <a href="timetable.html" class="nav-link" data-page="timetable">▦ Timetable</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-section">
+            <span class="sidebar-label">ACCOUNT</span>
+            <nav class="sidebar-nav">
+                <a href="profile.html" class="nav-link" data-page="profile">⚙ Profile</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-user">
+                <div class="avatar">T</div>
+                <div>
+                    <strong>Teacher</strong>
+                    <small>Teacher Portal</small>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn">↪ Logout</button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div class="topbar-title">
+                <h2>Teacher Dashboard</h2>
+                <p>Your academic overview</p>
+            </div>
+            <div class="topbar-actions">
+                <button class="icon-btn" id="notificationBtn">♧</button>
+                <div class="avatar">T</div>
+                <span>Teacher</span>
+            </div>
+        </header>
+
+        <section class="page-content">
+
+            <div class="welcome-banner">
+                <div>
+                    <span class="eyebrow">TEACHER PORTAL</span>
+                    <h1>Welcome Back</h1>
+                    <p>Manage your classes, students and academic activities.</p>
+                </div>
+                <div class="welcome-decoration">✦</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon purple">▤</div>
+                    <span>My Classes</span>
+                    <h2 id="teacherClassCount">0</h2>
+                    <small>Assigned classes</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">♙</div>
+                    <span>My Students</span>
+                    <h2 id="teacherStudentCount">0</h2>
+                    <small>Students in your classes</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">▧</div>
+                    <span>Assignments</span>
+                    <h2 id="teacherAssignmentCount">0</h2>
+                    <small>Created assignments</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">◷</div>
+                    <span>Attendance</span>
+                    <h2 id="teacherAttendanceCount">0</h2>
+                    <small>Recorded sessions</small>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <section class="dashboard-panel">
+                    <div class="panel-header">
+                        <h3>My Classes</h3>
+                        <a href="classes.html" class="text-link">View All</a>
+                    </div>
+                    <div id="teacherDashboardClasses">
+                        <div class="empty-state compact">
+                            <p>No class assignments available.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel">
+                    <div class="panel-header">
+                        <h3>Upcoming Schedule</h3>
+                        <a href="timetable.html" class="text-link">View Timetable</a>
+                    </div>
+                    <div id="teacherUpcomingSchedule">
+                <div class="empty-state compact">
+                            <p>No timetable entries available.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="dashboard-grid">
+
+                <section class="dashboard-panel">
+                    <div class="panel-header">
+                        <h3>Recent Assignments</h3>
+                        <a href="assignments.html" class="text-link">View All</a>
+                    </div>
+                    <div id="teacherRecentAssignments">
+                        <div class="empty-state compact">
+                            <p>No assignments created.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel">
+                    <div class="panel-header">
+                        <h3>Announcements</h3>
+                    </div>
+                    <div id="teacherAnnouncements">
+                        <div class="empty-state compact">
+                            <p>No announcements available.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </section>
+    </main>
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div id="toastContainer" class="toast-container"></div>
+
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

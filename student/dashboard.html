@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | NEXIT</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/student.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-portal="student" data-page="dashboard">
+
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="dashboard.html" class="brand">
+        <span class="brand-icon">N</span>
+        <span class="brand-name">NEXIT</span>
+      </a>
+      <button class="icon-button sidebar-close" id="sidebarClose" aria-label="Close sidebar">×</button>
+    </div>
+
+    <div class="sidebar-profile">
+      <div class="avatar avatar-lg" id="studentProfileAvatar">S</div>
+      <div class="sidebar-profile-info">
+        <strong id="studentSidebarName">Student</strong>
+        <span>Student Portal</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-label">MAIN MENU</span>
+      <a href="dashboard.html" class="nav-link active" data-page="dashboard">
+        <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+      </a>
+      <a href="attendance.html" class="nav-link" data-page="attendance">
+        <i data-lucide="calendar-check"></i><span>Attendance</span>
+      </a>
+      <a href="timetable.html" class="nav-link" data-page="timetable">
+        <i data-lucide="calendar-days"></i><span>Timetable</span>
+      </a>
+      <a href="assignments.html" class="nav-link" data-page="assignments">
+        <i data-lucide="clipboard-list"></i><span>Assignments</span>
+      </a>
+      <a href="results.html" class="nav-link" data-page="results">
+        <i data-lucide="graduation-cap"></i><span>Results</span>
+      </a>
+      <a href="study-planner.html" class="nav-link" data-page="study-planner">
+        <i data-lucide="book-open-check"></i><span>Study Planner</span>
+      </a>
+      <a href="announcements.html" class="nav-link" data-page="announcements">
+        <i data-lucide="megaphone"></i><span>Announcements</span>
+      </a>
+
+      <span class="nav-label">ACCOUNT</span>
+      <a href="profile.html" class="nav-link" data-page="profile">
+        <i data-lucide="user-round"></i><span>My Profile</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="nav-link logout-button" id="logoutBtn">
+        <i data-lucide="log-out"></i><span>Logout</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="topbar-heading">
+        <h1>Student Dashboard</h1>
+        <p>Overview of your academic progress</p>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="announcements.html" class="icon-button notification-button" aria-label="Announcements">
+          <i data-lucide="bell"></i>
+        </a>
+        <a href="profile.html" class="topbar-avatar">
+          <span id="studentTopbarInitial">S</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="welcome-banner student-welcome">
+        <div class="welcome-content">
+          <span class="welcome-eyebrow">STUDENT OVERVIEW</span>
+          <h2>Welcome back, <span id="studentDashboardName">Student</span>!</h2>
+          <p>Stay organized, keep learning, and track your academic progress.</p>
+          <a href="study-planner.html" class="btn btn-primary">
+            <i data-lucide="book-open"></i> Open Study Planner
+          </a>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-blue"><i data-lucide="calendar-check"></i></div>
+          <div class="stat-info">
+            <span>Attendance Rate</span>
+            <h3 id="studentAttendanceRate">--</h3>
+            <small>Based on recorded attendance</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-purple"><i data-lucide="clipboard-list"></i></div>
+          <div class="stat-info">
+            <span>Active Assignments</span>
+            <h3 id="studentAssignmentCount">0</h3>
+            <small>Assignments currently available</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-orange"><i data-lucide="graduation-cap"></i></div>
+          <div class="stat-info">
+            <span>Upcoming Exams</span>
+            <h3 id="studentUpcomingExamCount">0</h3>
+            <small>Scheduled examinations</small>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-green"><i data-lucide="check-circle"></i></div>
+          <div class="stat-info">
+            <span>Completed Tasks</span>
+            <h3 id="studentCompletedTaskCount">0</h3>
+            <small>Study planner tasks completed</small>
+          </div>
+        </article>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Attendance Overview</h3>
+              <p>Your attendance records</p>
+            </div>
+            <a href="attendance.html" class="text-link">View details</a>
+          </div>
+          <div id="studentAttendanceOverview" class="chart-container">
+            <div class="empty-state compact">
+              <i data-lucide="chart-no-axes-column"></i>
+              <h4>No attendance records</h4>
+              <p>Attendance information will appear when recorded.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Upcoming Assignments</h3>
+              <p>Tasks to keep you on track</p>
+            </div>
+            <a href="assignments.html" class="text-link">View all</a>
+          </div>
+          <div id="studentUpcomingAssignments">
+            <div class="empty-state compact">
+              <i data-lucide="clipboard-list"></i>
+              <h4>No assignments available</h4>
+              <p>Your assignments will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Upcoming Exams</h3>
+              <p>Prepare ahead of time</p>
+            </div>
+          </div>
+          <div id="studentUpcomingExams">
+            <div class="empty-state compact">
+              <i data-lucide="calendar"></i>
+              <h4>No exams scheduled</h4>
+              <p>Exam schedules will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>My Study Planner</h3>
+              <p>Personal study tasks</p>
+            </div>
+            <a href="study-planner.html" class="text-link">Open planner</a>
+          </div>
+          <div id="studentPlannerPreview">
+            <div class="empty-state compact">
+              <i data-lucide="book-open"></i>
+              <h4>No study tasks</h4>
+              <p>Add your first study task to get started.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h3>Latest Announcements</h3>
+            <p>Updates from your institution</p>
+          </div>
+          <a href="announcements.html" class="text-link">View all</a>
+        </div>
+
+        <div id="studentAnnouncements">
+          <div class="empty-state compact">
+            <i data-lucide="megaphone"></i>
+            <h4>No announcements yet</h4>
+            <p>Institution announcements will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</div>
+
+<div id="modalContainer"></div>
+<div id="toastContainer" class="toast-container"></div>
+
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>

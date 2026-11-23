@@ -1,0 +1,243 @@
+
+/* =========================================================
+   NEXIT - DASHBOARD STYLES
+   File: css/dashboard.css
+========================================================= */
+
+.dashboard-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-grid > .panel {
+  min-height: 280px;
+}
+
+.dashboard-grid .panel-header {
+  align-items: flex-start;
+}
+
+.dashboard-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dashboard-activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.dashboard-activity-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-activity-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboard-activity-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.dashboard-activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-activity-content h4 {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.dashboard-activity-content p {
+  font-size: 11px;
+}
+
+.dashboard-activity-time {
+  color: var(--text-light);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.dashboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+}
+
+.dashboard-list-item-main {
+  min-width: 0;
+}
+
+.dashboard-list-item-main strong {
+  display: block;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.dashboard-list-item-main small {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.dashboard-list-item-action {
+  flex-shrink: 0;
+}
+
+.dashboard-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.dashboard-chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.dashboard-chart-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.dashboard-chart-dot.success {
+  background: var(--success);
+}
+
+.dashboard-chart-dot.warning {
+  background: var(--warning);
+}
+
+.dashboard-chart-dot.danger {
+  background: var(--danger);
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dashboard-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboard-section-heading h2 {
+  font-size: 18px;
+}
+
+.dashboard-section-heading p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.dashboard-metric-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.dashboard-metric-change.positive {
+  color: var(--success);
+}
+
+.dashboard-metric-change.negative {
+  color: var(--danger);
+}
+
+.dashboard-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  transition: all var(--transition-fast);
+}
+
+.quick-action-card:hover {
+  border-color: #c7d2fe;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.quick-action-card .stat-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.quick-action-card strong {
+  font-size: 12px;
+}
+
+.quick-action-card small {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.dashboard-date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.dashboard-chart-placeholder {
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: linear-gradient(to bottom, #fafbff, #fff);
+  border-radius: 10px;
+}
+
+.dashboard-chart-placeholder p {
+  font-size: 12px;
+}
+
+.dashboard-table-section {
+  overflow: hidden;
+}

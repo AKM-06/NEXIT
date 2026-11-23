@@ -1,0 +1,651 @@
+
+/* =========================================================
+   NEXIT - RESPONSIVE STYLES
+   File: css/responsive.css
+========================================================= */
+
+/* -------------------------
+   Large Tablets / Small Desktop
+------------------------- */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .page-content {
+    padding: 22px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-class-grid,
+  .teacher-class-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-schedule-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dashboard-quick-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-hero-grid {
+    gap: 40px;
+  }
+}
+
+/* -------------------------
+   Tablet
+------------------------- */
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 260px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .sidebar-close {
+    display: inline-flex;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-schedule-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-hero-content {
+    max-width: 720px;
+  }
+
+  .landing-hero-visual {
+    max-width: 650px;
+    margin: 30px auto 0;
+    width: 100%;
+  }
+
+  .landing-about-grid {
+    gap: 35px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portal-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-card p {
+    min-height: auto;
+  }
+
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-visual {
+    display: none;
+  }
+
+  .auth-main {
+    padding: 30px 24px;
+  }
+
+  .auth-mobile-brand {
+    display: block;
+  }
+}
+
+/* -------------------------
+   Mobile
+------------------------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .topbar {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .topbar-heading h1 {
+    font-size: 16px;
+  }
+
+  .topbar-heading p {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .page-content {
+    padding: 16px;
+    gap: 18px;
+  }
+
+  .page-intro h2 {
+    font-size: 20px;
+  }
+
+  .page-intro-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-intro-actions .btn {
+    width: 100%;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .panel-header > select {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stat-info h3 {
+    font-size: 20px;
+  }
+
+  .stat-info small {
+    line-height: 1.5;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dashboard-grid > .panel {
+    min-height: auto;
+  }
+
+  .dashboard-quick-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .quick-action-card {
+    padding: 14px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .toolbar select {
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-group select {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .admin-class-grid,
+  .teacher-class-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-results-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-attendance-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-attendance-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .teacher-attendance-toolbar .form-group {
+    width: 100%;
+  }
+
+  .student-assignments-container {
+    grid-template-columns: 1fr;
+  }
+
+  .student-result-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .student-profile-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-calendar-day {
+    min-height: 68px;
+    padding: 5px;
+  }
+
+  .planner-day-number {
+    font-size: 10px;
+  }
+
+  .planner-day-task {
+    font-size: 8px;
+    padding: 2px 3px;
+  }
+
+  .planner-weekdays span {
+    font-size: 9px;
+    padding: 8px 2px;
+  }
+
+  .planner-month-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .profile-header-content {
+    align-items: flex-start;
+  }
+
+  .profile-photo-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-header-info h3 {
+    font-size: 17px;
+  }
+
+  .landing-container {
+    width: calc(100% - 32px);
+  }
+
+  .landing-header .landing-container {
+    min-height: 66px;
+  }
+
+  .landing-nav {
+    display: none;
+  }
+
+  .landing-actions {
+    margin-left: auto;
+  }
+
+  .landing-actions .btn {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .landing-menu-toggle {
+    display: none;
+  }
+
+  .landing-hero {
+    padding: 55px 0;
+  }
+
+  .landing-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .landing-hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-trust {
+    gap: 12px;
+  }
+
+  .hero-trust-item {
+    font-size: 9px;
+  }
+
+  .hero-visual-card {
+    transform: none;
+  }
+
+  .floating-card-top {
+    right: 0;
+  }
+
+  .floating-card-bottom {
+    left: 0;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 22px;
+  }
+
+  .landing-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-about-grid h2 {
+    font-size: 29px;
+  }
+
+  .landing-cta {
+    padding: 55px 20px;
+  }
+
+  .landing-cta h2 {
+    font-size: 27px;
+  }
+
+  .landing-footer .landing-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auth-main {
+    padding: 20px 18px;
+  }
+
+  .auth-card {
+    max-width: 480px;
+  }
+
+  .auth-heading h2 {
+    font-size: 25px;
+  }
+
+  .auth-heading {
+    margin-bottom: 22px;
+  }
+
+  .auth-form {
+    gap: 15px;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-header {
+    padding: 16px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-footer {
+    padding: 14px 16px;
+  }
+}
+
+/* -------------------------
+   Small Mobile
+------------------------- */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 12px;
+  }
+
+  .menu-toggle {
+    margin-right: 5px;
+  }
+
+  .topbar-heading h1 {
+    font-size: 14px;
+  }
+
+  .topbar-actions .icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+
+  .stats-grid {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-info h3 {
+    font-size: 18px;
+  }
+
+  .stat-info span {
+    font-size: 10px;
+  }
+
+  .stat-info small {
+    font-size: 9px;
+  }
+
+  .welcome-banner {
+    padding: 22px;
+  }
+
+  .welcome-banner h2 {
+    font-size: 21px;
+  }
+
+  .panel {
+    padding: 13px;
+  }
+
+  .dashboard-quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+
+  .profile-header-content {
+    gap: 12px;
+  }
+
+  .profile-photo-wrapper {
+    width: 58px;
+    height: 58px;
+  }
+
+  .profile-header-info h3 {
+    font-size: 15px;
+  }
+
+  .auth-main {
+    padding: 15px;
+  }
+
+  .auth-card {
+    padding: 10px 0;
+  }
+
+  .auth-heading h2 {
+    font-size: 23px;
+  }
+
+  .landing-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .landing-actions .btn-outline {
+    display: none;
+  }
+
+  .hero-visual-sidebar {
+    width: 42px;
+  }
+
+  .hero-visual-main {
+    padding: 12px;
+  }
+
+  .mini-stat {
+    padding: 9px;
+  }
+
+  .hero-floating-card {
+    padding: 9px 12px;
+    font-size: 9px;
+  }
+
+  .landing-cta h2 {
+    font-size: 23px;
+  }
+
+  .landing-footer p {
+    font-size: 10px;
+  }
+}
+
+/* -------------------------
+   Reduced Motion
+------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
